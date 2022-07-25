@@ -1,12 +1,19 @@
 import React from 'react'
 import { Typography } from '@mui/material'
 import { makeStyles } from '@mui/styles'
-import MoreHorizIcon from '@mui/icons-material';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 const useStyle = makeStyles(theme => ({
-  root: {
+  title: {
    display:"flex",
+   justifyContent:"space-around"
+  },
+  titleText: {
+    flexGrow: 1,
+    fontSize: "1.2rem",
+    fontWeight:"bold"
   }
+
 }));
 
 const CardTitle = () => {
@@ -17,7 +24,6 @@ const CardTitle = () => {
       Titulo CardTitle:To do
       </Typography>
       <MoreHorizIcon/>
-
     </div>
   )
 }
