@@ -6,10 +6,10 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 const useStyle = makeStyles(theme => ({
   title: {
    display:"flex",
-   justifyContent:"space-around"
+   justifyContent:"space-around",
+   margin:"10px"
   },
   titleText: {
-    flexGrow: 1,
     fontSize: "1.2rem",
     fontWeight:"bold"
   }
