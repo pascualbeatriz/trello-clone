@@ -15,16 +15,18 @@ const useStyle = makeStyles(theme => ({
   }
 }));
 
-const TrelloList = () => {
+const TrelloList = ({list}) => {
+  console.log(list,"Trellolist")
   const classes = useStyle();
   return (
     <Paper className={classes.root}>
       <CssBaseline />
-      <CardTitle />
-      <div>TrelloList</div>
-      <TrelloCard/>
-      <TrelloCard/>
-      <TrelloCard/>
+      <div>TrelloList</div> 
+      <CardTitle title={list.title} listId= {list.id}/> {
+        list.cards.map(card => (
+          <TrelloCard card={card} key= {card.id}/>
+        ))
+      }
       <AddCardorList type="card"/>
     </Paper>
   )

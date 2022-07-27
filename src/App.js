@@ -3,7 +3,7 @@ import TrelloList from './components/TrelloList';
 import { makeStyles } from '@mui/styles';
 import { Fragment, useState } from 'react';
 import AddCardorList from './components/AddCardorList';
-import mockData from './components/mockdata';
+import mockData from './components/mockdata.js';
 
 const useStyle = makeStyles(theme => ({
   roots: {
@@ -22,9 +22,15 @@ function App() {
   console.log(data)
   return (
     <Fragment className={classes.roots}>
-    <div className={classes.container}>
-      <TrelloList />
-      <TrelloList/>
+    <div className={classes.container}> {
+      data.listIds.map((listId,idx) => {
+        console.log(listId)
+        const list = data.lists[listId]
+        return(
+          <TrelloList list={list} key={idx}/>
+        )
+      })
+    }
       <div>
       <AddCardorList type="list"/>
       </div>

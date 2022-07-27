@@ -10,11 +10,11 @@ const useStyle = makeStyles(theme => ({
   }
 }));
 
-const TrelloCard = () => {
+const TrelloCard = ({card}) => {
   const classes = useStyle();
   return (
     <Paper className={classes.rootCard}>
-      <div>TrelloCard</div>
+      <div>{card.title}</div>
     </Paper>
   )
 }

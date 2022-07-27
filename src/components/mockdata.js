@@ -22,8 +22,8 @@ const mockData = {
       title:"In progress",
       cards: []
     },
-    listIds: ["01list","02list"]
-  }
+  },
+  listIds: ["01list","02list"]
 }
 
 export default mockData
