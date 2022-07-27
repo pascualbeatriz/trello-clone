@@ -31,7 +31,7 @@ const CardTitle = ({title, listId}) => {
 
   const handleBlur = () => {
     //actualizar title a Newtitle
-    updateListTitle(newTitle, listId)
+    // updateListTitle(newTitle, listId)
     setOpen(false)
   }
 
