@@ -1,10 +1,12 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import { Paper, InputBase} from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import Button from '@mui/material/Button';
 import ClearIcon from '@mui/icons-material/Clear';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import IconButton from '@mui/material/IconButton';
+import ContextAPI from '../ContextAPI';
+
 
 
 const useStyle = makeStyles(theme => ({
@@ -35,10 +37,21 @@ const useStyle = makeStyles(theme => ({
   }
 }));
 
-const AddCardorListTitle = ({type, setOpen}) => {
+const AddCardorListTitle = ({type, setOpen, listId}) => {
   const classes = useStyle();
   const [title,setTitle] = useState("");
   console.log(title)
+  const {addCard, addList} = useContext(ContextAPI);
+
+  const handleAddCardorList = () => {
+    if(type === "card") {
+      addCard(title, listId)
+    } else {
+      addList(title)
+    }
+    setTitle("")
+    setOpen(false)
+  }
   return (
     <>
     <Paper className={classes.card}>
@@ -55,7 +68,8 @@ const AddCardorListTitle = ({type, setOpen}) => {
     </Paper>
     <div className={classes.confirm}>
       <div className={classes.options}>
-      <Button className={classes.btnConfirm}>{
+      <Button className={classes.btnConfirm} 
+      onClick={handleAddCardorList}>{
         type === "card" ? "Add CARD" : "Add LIST"
       }</Button>
       <IconButton onClick={()=> setOpen(false)}>
