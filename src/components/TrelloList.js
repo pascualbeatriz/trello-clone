@@ -10,7 +10,7 @@ import AddCardorList from './AddCardorList';
 const useStyle = makeStyles(theme => ({
   root: {
    width: "300px",
-   background: "#ebecf0",
+   backgroundColor: "#ebecf0",
    margin:"10px"
   }
 }));
@@ -25,7 +25,7 @@ const TrelloList = () => {
       <TrelloCard/>
       <TrelloCard/>
       <TrelloCard/>
-      <AddCardorList/>
+      <AddCardorList type="card"/>
     </Paper>
   )
 }
