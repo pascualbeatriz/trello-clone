@@ -33,7 +33,9 @@ function App() {
     })
   }
 
-  const addCard = () => {}
+  const addCard = (title, listId) => {
+    
+  }
   const addList = () => {}
 
   return (
