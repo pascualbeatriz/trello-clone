@@ -6,6 +6,7 @@ import AddCardorList from './components/AddCardorList';
 import mockData from './components/mockdata.js';
 import ContextAPI from './ContextAPI';
 import uuid from 'react-uuid'
+import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 
 const useStyle = makeStyles(theme => ({
@@ -72,9 +73,14 @@ function App() {
     })
   }
 
+  const onDragEnd = () => {
+    
+  }
+
   return (
     <ContextAPI.Provider value={{updateListTitle, addCard, addList}}>
       <section className={classes.roots}>
+      <DragDropContext onDragEnd={onDragEnd}>
         <div className={classes.container}> {
           data.listIds.map((listId,idx) => {
             console.log(listId)
@@ -88,6 +94,7 @@ function App() {
         <AddCardorList type="list"/>
         </div>
         </div>
+      </DragDropContext>
       </section>
     </ContextAPI.Provider>
   );
