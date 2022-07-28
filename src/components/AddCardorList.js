@@ -3,7 +3,7 @@ import { Collapse, Fade, Paper, Typography } from '@mui/material';
  // eslint-disable-next-line 
 import { makeStyles } from '@mui/styles';
 import AddCardorListTitle from './AddCardorListTitle'
-import TrelloList from './TrelloList';
+// import TrelloList from './TrelloList';
 
 const useStyle = makeStyles(theme => ({
   title: {
@@ -22,7 +22,7 @@ const useStyle = makeStyles(theme => ({
 
 }));
 
-const AddCardorList = ({type}) => {
+const AddCardorList = ({type, listId}) => {
   const classes = useStyle();
    // eslint-disable-next-line 
   const [open, setOpen] = useState(true);
@@ -30,7 +30,7 @@ const AddCardorList = ({type}) => {
     <div className={classes.title}>
     {/* AddCardorList */}
     <Collapse in={open}>
-      <AddCardorListTitle type= {type} setOpen={setOpen}/>
+      <AddCardorListTitle type= {type} setOpen={setOpen} listId={listId}/>
     </Collapse>
     <Collapse in={!open}>
     <Paper className={classes.AddCardorListTitle} onClick={() => setOpen(true)}>
