@@ -81,6 +81,7 @@ function App() {
     <ContextAPI.Provider value={{updateListTitle, addCard, addList}}>
       <section className={classes.roots}>
       <DragDropContext onDragEnd={onDragEnd}>
+      <Droppable>
         <div className={classes.container}> {
           data.listIds.map((listId,idx) => {
             console.log(listId)
@@ -94,6 +95,7 @@ function App() {
         <AddCardorList type="list"/>
         </div>
         </div>
+      </Droppable>
       </DragDropContext>
       </section>
     </ContextAPI.Provider>
