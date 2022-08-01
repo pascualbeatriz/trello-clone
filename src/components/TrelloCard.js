@@ -1,6 +1,7 @@
 import React from 'react'
 import { Paper } from '@mui/material'
 import { makeStyles } from '@mui/styles';
+import { Draggable } from 'react-beautiful-dnd';
 
 
 const useStyle = makeStyles(theme => ({
@@ -10,12 +11,20 @@ const useStyle = makeStyles(theme => ({
   }
 }));
 
-const TrelloCard = ({card}) => {
+const TrelloCard = ({card, index}) => {
   const classes = useStyle();
   return (
-    <Paper className={classes.rootCard}>
-      <div>{card.title}</div>
-    </Paper>
+    <Draggable draggableId={card.id} index={index}> 
+    {
+      (provided) => (
+        <div {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
+          <Paper className={classes.rootCard}>
+            <div>{card.title}</div>
+          </Paper>
+        </div>
+      )
+    }
+    </Draggable>
   )
 }
 

@@ -36,7 +36,7 @@ const useStyle = makeStyles((theme) => ({
 const AddCardorListTitle = ({ type, setOpen, addCard, addList, listId }) => {
   const classes = useStyle();
   const [title, setTitle] = useState("");
-  console.log(title);
+  // console.log(title);
 
   function onClickAddCard() {
     addCard(listId, title);
