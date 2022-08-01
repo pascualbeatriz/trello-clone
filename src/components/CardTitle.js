@@ -1,8 +1,7 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { Typography, InputBase } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-import ContextAPI from '../ContextAPI';
 
 const useStyle = makeStyles(theme => ({
   title: {
@@ -29,11 +28,10 @@ const CardTitle = ({title, listId}) => {
   const classes = useStyle();
   const [open, setOpen] = useState(false);
   const [newTitle, setNewTitle] = useState(title);
-  const {updateListTitle} = useContext(ContextAPI);
 
   const handleBlur = () => {
     //actualizar title a Newtitle
-    updateListTitle(newTitle, listId)
+    // updateListTitle(newTitle, listId)
     setOpen(false)
   }
 
