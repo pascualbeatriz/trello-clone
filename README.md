@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+Esta prueba está hecha con React (Una biblioteca de JavaScript)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Para poder usar REACT tienes que seguir estos pasos: Instalación Para comenzar a utilizar React debemos instalar algunos paquetes. Lo primero que tenemos que instalar es Node.js ya que vamos a utilizar npm para la instalación de los paquetes de ReactJs. Una vez descargado e instalado, vamos a proceder con los siguientes comandos: Verificar si esta bien instalado Node y que versión: node -v
 
-## Available Scripts
+Y por último, iniciar la aplicación: npm start Si todo esta bien, la aplicación estará corriendo en el puerto 3000.
 
-In the project directory, you can run:
+----------------------------------------------------------------------------------------------
 
-### `npm start`
+Pasos a seguir de este ejercicio:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Fase 1: Creación del proyecto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+He instalado: 
+1. React: create-react-app (https://create-react-app.dev/)
+2. Redux: npm install redux (https://redux.js.org/introduction/getting-started)
+3. React-redux: npm install react-redux (https://react-redux.js.org/introduction/getting-started)
+4. Material UI: npm install @mui/material @emotion/react @emotion/styled (https://mui.com/material-ui/getting-started/installation/)
+5. React Uuid: npm i react-uuid (https://www.npmjs.com/package/react-uuid)
+6. React-beautiful-dnd: npm install react-beautiful-dnd --save (https://github.com/atlassian/react-beautiful-dnd/blob/HEAD/docs/about/installation.md)
 
-### `npm test`
+Fase 2: Crear un listado de listas (tareas) con Título, cards internas (subtareas) e input para agregar tareas
+Fase 3: Crear funcionalidad de añadir tareas en el input, así como en el button y dejarlas fijas en la card del listado
+Fase 4: Crear un store con redux para poder reutilizar el uso de las funciones addList y addCard y almacenarlas
+Fase 5: Añadir drag and drop mediante la librería React-beautiful-dnd
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
