@@ -20,8 +20,8 @@ const useStyle = makeStyles((theme) => ({
 function App({ listIds, lists }) {
   const classes = useStyle();
 
-  const onDragEnd = () => {
-
+  const onDragEnd = (result) => {
+  console.log(result)
   }
 
   return (
