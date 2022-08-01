@@ -16,19 +16,19 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-const TrelloList = ({ list, listId, index }) => {
-  console.log(listId, "ID")
+const TrelloList = ({ list, index }) => {
+  console.log(list, "Trellolist");
   const classes = useStyle();
   return (
-    <Draggable draggableId= {listId} index={index}> 
+    <Draggable draggableId= {list.id} index={index}> 
     {
       (provided) => (
         <div {...provided.draggableProps} ref={provided.innerRef}>
           <Paper className={classes.root}  {...provided.dragHandleProps}>
             <CssBaseline />
             <div>TrelloList</div>
-            <CardTitle title={list.title} listId={listId} />
-              <Droppable droppableId={listId}> 
+            <CardTitle title={list.title} listId={list.id} />
+              <Droppable droppableId={list.id}> 
               {
                 (provided) => (
                   <div>
@@ -42,7 +42,7 @@ const TrelloList = ({ list, listId, index }) => {
               }
               </Droppable> {provided.placeholder}
 
-            <AddCardorList listId={listId} type="card" /> 
+            <AddCardorList listId={list.id} type="card" /> 
           </Paper>
         </div>
       )

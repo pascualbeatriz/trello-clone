@@ -34,9 +34,7 @@ function App({ listIds, lists }) {
           <div className={classes.container} {...provided.droppableProps} ref={provided.innerRef}
             >
             {listIds.map((listId, idx) => {
-              console.log(listId[listId], "A VER QUE ES ESTO")
               const list = lists[listId];
-              console.log(list, "Lo que da es el item entero")
               return <TrelloList list={list} listId={listId} key={idx} />;
             })}
             <div>
@@ -52,7 +50,6 @@ function App({ listIds, lists }) {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state.listIds, "EL LIST:ID")
   return {
     listIds: state.listIds,
     lists: state.lists,
