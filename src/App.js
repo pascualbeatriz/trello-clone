@@ -35,7 +35,7 @@ function App({ listIds, lists }) {
             >
             {listIds.map((listId, idx) => {
               const list = lists[listId];
-              return <TrelloList list={list} listId={listId} key={idx} />;
+              return <TrelloList list={list} listId={listId} key={idx} index={idx}/>;
             })}
             <div>
               <AddCardorList type="list" /> {provided.placeholder}
@@ -50,6 +50,7 @@ function App({ listIds, lists }) {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state.listIds,"del estado")
   return {
     listIds: state.listIds,
     lists: state.lists,

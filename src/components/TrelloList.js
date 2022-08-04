@@ -18,6 +18,7 @@ const useStyle = makeStyles((theme) => ({
 
 const TrelloList = ({ list, index }) => {
   console.log(list, "Trellolist");
+  console.log(index, "TrellolistINDEX");
   const classes = useStyle();
   return (
     <Draggable draggableId= {list.id} index={index}> 

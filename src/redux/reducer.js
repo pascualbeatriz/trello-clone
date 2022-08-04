@@ -35,7 +35,7 @@ export function reducer(state = initialState, action) {
       const { listId, cardTitle } = action;
       const list = state.lists[listId];
   
-      list.cards.push({ id: Date.now(), title: cardTitle });
+      list.cards.push({ id: Date.now() + "", title: cardTitle });
       const newListsObject = { ...state.lists, [listId]: list };
       return Object.assign({}, state, {
         lists: newListsObject,
@@ -44,10 +44,11 @@ export function reducer(state = initialState, action) {
     }
     case ADD_LIST: {
       const { listTitle } = action;
+      const newListId = Date.now() + ""
       const newListsObject = {
         ...state.lists,
-        [Date.now()]: {
-          id: Date.now(),
+        [newListId] : {
+          id: newListId ,
           title: listTitle,
           cards: [],
         },
